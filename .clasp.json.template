@@ -1,0 +1,4 @@
+{
+  "scriptId": "<deploy対象のスクリプトID>",
+  "rootDir": "dist"
+}

@@ -1,0 +1,7 @@
+{
+  "cSpell.words": ["Usecase"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always",
+    "source.addMissingImports": "always"
+  }
+}

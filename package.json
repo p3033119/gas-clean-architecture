@@ -1,0 +1,23 @@
+{
+  "name": "gas-clean-architecture",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "build": "rm -rf dist && tsc -p tsconfig.json && cp src/appsscript.json dist/appsscript.json && sed -i '' 's/export //g' dist/*.js dist/**/*.js dist/**/**/*.js && sed -i '' '/import/d' dist/*.js dist/**/*.js dist/**/**/*.js",
+    "push": "clasp push",
+    "open": "clasp open",
+    "deploy": "npm run build && npm run push"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.82",
+    "clasp": "^1.0.0",
+    "esbuild": "^0.20.1",
+    "esbuild-gas-plugin": "^0.8.0",
+    "typescript": "^5.3.3"
+  }
+}
